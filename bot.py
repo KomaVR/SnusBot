@@ -14,7 +14,7 @@ class MyBot(commands.Bot):
             intents=discord.Intents.default(),
             application_id=None,  # Optional: or set your app ID
         )
-        self.tree = app_commands.CommandTree(self)
+        # self.tree = app_commands.CommandTree(self)  # REMOVE THIS LINE
 
     async def setup_hook(self):
         await self.tree.sync()
