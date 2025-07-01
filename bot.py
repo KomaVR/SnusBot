@@ -7,6 +7,7 @@ DISCORD_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 SNUSBASE_KEY = os.getenv("SNUSBASE_API_KEY")
 
 intents = discord.Intents.default()
+intents.message_content = True
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
 def search_snusbase(term, search_type):
